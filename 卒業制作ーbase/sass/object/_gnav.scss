@@ -1,0 +1,65 @@
+.gnav {
+  width: 96%;
+  margin-top: 10px;
+
+  @include breakpoint-down(md) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all .5s;
+    opacity: 0;
+    padding: 40px 0;
+    margin-top: 65px;
+
+    &.is-active {
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 1;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @include breakpoint-down(md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 30px;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+  }
+
+  &__item {
+    width: 100%;
+    flex-grow: 1;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    @include breakpoint-down(md) {}
+  }
+
+  &__link {
+    display: block;
+    padding: 20px 0 5px;
+    background-color: color(main);
+    color: #fff;
+    font-size: 1em;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    @include breakpoint-down(md) {
+      padding: 30px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+
+    @include breakpoint-down(xs) {
+      padding: 15px;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="テスト" />
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic|Sawarabi+Mincho&display=swap&subset=japanese" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <header class="l-header">
+    <div class="l-header__inner">
+      <div class="l-header__top">
+        <h1 class="l-header__logo">
+          <a class="l-header__link" href="index.html">
+            <img src="img/logo.png" alt="">
+          </a>
+        </h1>
+
+        <div class="contact-link">
+          <div class="contact-link__inner">
+            <a class="contact-link__link" href="">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+      <nav class="gnav">
+        <ul class="gnav__list">
+          <li class="gnav__item"><a class="gnav__link" href="#">ホーム</a></li>
+          <li class="gnav__item"><a class="gnav__link" href="#">企業紹介</a></li>
+          <li class="gnav__item"><a class="gnav__link" href="#">研修内容</a></li>
+          <li class="gnav__item"><a class="gnav__link" href="#">お客様の声</a></li>
+          <li class="gnav__item"><a class="gnav__link" href="#">ブログ</a></li>
+          <li class="gnav__item"><a class="gnav__link" href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button type="button" id="js-button-hamburger" class="hamburger button" aria-expanded="false">
+        <span class="hamburger__line">
+          <span class="hamburger__visually-hidden">メニューを開閉する</span>
+        </span>
+      </button>
+    </div>
+  </header>
+  <main class="l-main">
+
+    <div class="l-hero">
+      <div class="l-hero__inner">
+        <div class="l-hero__txt-box">
+          <h2 class="l-hero__heading">
+            研修内容
+          </h2>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="l-footer">
+    <div class="l-footer__inner">
+      <div class="sitemap">
+        <div class="sitemap__inner">
+          <ul class="sitemap__parents">
+            <li class="sitemap__parent">
+              <a class="sitemap__link -parent" href="/">棚田里美について</a>
+              <ul class="sitemap__childs">
+                <li class="sitemap__child"><a class="sitemap__link" href="/">ごあいさつ</a></li>
+                <li class="sitemap__child"><a class="sitemap__link" href="/">選ばれる理由</a></li>
+                <li class="sitemap__child"><a class="sitemap__link" href="/">実績</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="sitemap__parents">
+            <li class="sitemap__parent">
+              <a class="sitemap__link -parent" href="/">研修内容</a>
+              <ul class="sitemap__childs">
+                <li class="sitemap__child"><a class="sitemap__link" href="/">研修テーマ</a></li>
+                <li class="sitemap__child"><a class="sitemap__link" href="/">その他のテーマ</a></li>
+                <li class="sitemap__child"><a class="sitemap__link" href="/">料金表</a></li>
+                <li class="sitemap__child"><a class="sitemap__link" href="/">研修の流れ</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="sitemap__parents">
+            <ul class="sitemap__parents">
+              <li class="sitemap__parent">
+                <a class="sitemap__link -parent" href="/">ブログ</a>
+              </li>
+            </ul>
+            <li class="sitemap__parent">
+              <a class="sitemap__link -parent" href="/">お客様の声</a>
+              <ul class="sitemap__childs">
+                <li class="sitemap__child"><a class="sitemap__link" href="/">お客様の声</a></li>
+                <li class="sitemap__child"><a class="sitemap__link" href="/">導入事例</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="sitemap__parents">
+            <li class="sitemap__parent">
+              <a class="sitemap__link -parent" href="/">お問い合わせ</a>
+              <ul class="sitemap__childs">
+                <li class="sitemap__child"><a class="sitemap__link" href="/">お問い合わせ</a></li>
+                <li class="sitemap__child"><a class="sitemap__link" href="/">アクセス</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="adress">
+        <div class="adress__inner">
+          <span class="adress__post">〒730-0803</span>
+          <span class="adress__main"> 広島市中区広瀬北町3-11</span>
+          <span class="adress__sub">和光広瀬ビル　ソアラビジネスポート　424号室</span>
+          <span class="adress__tel">電 話：090-4575-8163　</span>
+          <span class="adress__mail">メールアドレス：satomi-tanada@outlook.jp</span>
+        </div>
+      </div>
+    </div>
+    <small class="l-footer__copywrite">Copyright 2020 satomi-tanada</small>
+  </footer>
+  <script src="js/hamburger.js"></script>
+  <script src="js/gnav-fixed.js"></script>
+</body>
+
+</html>

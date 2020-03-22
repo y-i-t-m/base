@@ -1,0 +1,22 @@
+.contact-link {
+
+  &__inner {
+
+  }
+
+  &__link {
+    display: block;
+    padding: 18.2px;
+    background-color: color(accent);
+    // border-left: 1px solid #333;
+
+    @include breakpoint-down(xs){
+      padding: 18.7px 4px 19px 4px;
+      font-size: rem(15);
+    }
+
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+}

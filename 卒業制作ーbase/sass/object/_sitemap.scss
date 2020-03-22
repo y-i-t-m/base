@@ -1,0 +1,20 @@
+.sitemap {
+
+  &__inner {
+    display: flex;
+  }
+
+  &__parents {
+    padding-right: 30px;
+  }
+
+  &__link {
+    display: block;
+    color: #fff;
+
+    &.-parent {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.l-hero {
+  position: relative;
+  height: 614px;
+  background-image: url(../../img/dezainnann-2.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-top: 65px;
+  @include breakpoint(md) {
+    margin-top: 119px;
+  }
+
+  &__inner {}
+
+  &__txt-box {
+    position: absolute;
+    top: 0%;
+    right: 20%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    @include breakpoint-down(xs) {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+
+  &__heading {
+    color: #fff;
+    font-size: rem(150);
+    @include font(mincho, normal);
+
+    @include breakpoint-down(md) {
+      font-size: rem(100);
+    }
+
+    @include breakpoint-down(xs) {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      font-size: rem(80);
+    }
+
+  }
+
+}

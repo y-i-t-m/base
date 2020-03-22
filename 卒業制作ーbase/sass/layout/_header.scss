@@ -1,0 +1,58 @@
+.l-header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  transition: .5s;
+  background-color: #fff;
+  border-bottom: 5px solid color(main-sub);
+
+  &.js-hide {
+    top: -130px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 0;
+    width: 100%;
+
+    @include breakpoint-down(md) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+  }
+
+  &__logo {
+    width: 350px;
+
+    @include breakpoint-down(md) {
+      width: 250px;
+      justify-content: center;
+      margin-left: 10px;
+      margin-bottom: 0;
+    }
+
+    @include breakpoint-down(xs) {
+      width: 200px;
+    }
+  }
+
+  &__link {
+
+    img {
+      display: block;
+    }
+  }
+
+
+}

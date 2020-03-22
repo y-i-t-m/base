@@ -1,0 +1,13 @@
+$default-line-height: 1.5; // line-heightの初期値
+$default-letter-spacing: 50; // letter-spacingの初期値（カンプサイズ）
+
+// **
+// custum settings
+// ****************************************
+$padding-sp: 28px; // SP時の横余白
+$padding-pc: 56px; // PC時の横余白
+$header-max-width: 1160px; // ヘッダーの最大幅
+$second-container-width: 1160px; // 小さいコンテナの幅
+$header-height-sp: 83px; // ヘッダーの高さ（SP時）
+$header-height-pc: 120px; // ヘッダーの高さ（PC時）
+$sticky-height-pc: 60px; // 追従ヘッダーの高さ(PC時）

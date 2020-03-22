@@ -1,0 +1,48 @@
+.l-footer {
+  padding: 50px 50px 0;
+  background-color: color(main);
+  color: #fff;
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+
+    @include breakpoint-down(ml) {
+      flex-direction: column;
+    }
+  }
+
+  &__copywrite {
+    display: block;
+    font-size: rem(16);
+    padding: 15px 0;
+    text-align: center;
+  }
+}
+
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.blog__inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.article {
+  padding-top: 30px;
+  padding-left: 30px;
+  width: calc(100%/3);
+  text-align: center;
+}
+
+.article__inner {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+}

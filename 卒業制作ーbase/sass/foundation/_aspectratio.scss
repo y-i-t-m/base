@@ -1,0 +1,85 @@
+$ratios: (
+  square: (1, 1),
+  normal: (4, 3),
+  wide: (16, 9),
+  golden: (1000, 1618), // 黄金比 第1貴金属比
+  silver: (1000, 2414), // 白銀比 第2貴金属比
+  root: (1000, 1414), // ルート長方形
+  header-logo: (225, 72), // 25:8
+  megamenu-img: (120, 80), // 3:2
+  latest-topics: (280, 180), // 14:9
+  topics:(180, 120), // 3:2
+  top-hero: (1440, 780), // 24:13
+  top-hero-sp: (375, 320), // 75:64
+  section-hero: (1920, 614),
+  section-hero-md: (768, 710),
+  section-hero-sp: (375, 550),
+);
+
+// アスペクト比計算ツール
+// https://aspect.arc-one.jp/
+
+// **
+// * アスペクト比設定
+// * @param {String} $ratio-key $ratiosのキー
+// * @param {?Boolean} $is-landscape 横長ならtrue(default), falseにすると縦横が入れ替わる
+// * @content 直下の img,object,svg,video,embed へ 出力
+// ************************************************
+@mixin aspectratio($ratio-key, $is-landscape: true) {
+  $horizontal: 1;
+  $vertical: 1;
+
+  @if $is-landscape {
+    $horizontal: max(nth(map-get($ratios, $ratio-key), 1), nth(map-get($ratios, $ratio-key), 2));
+    $vertical: min(nth(map-get($ratios, $ratio-key), 1), nth(map-get($ratios, $ratio-key), 2));
+  }
+
+  @else {
+    $horizontal: min(nth(map-get($ratios, $ratio-key), 1), nth(map-get($ratios, $ratio-key), 2));
+    $vertical: max(nth(map-get($ratios, $ratio-key), 1), nth(map-get($ratios, $ratio-key), 2));
+  }
+
+  height: 0;
+  padding-bottom: aspectratio($horizontal, $vertical);
+  overflow: hidden;
+
+  >picture>img,
+  >img,
+  >object,
+  >svg,
+  >iframe,
+  >video,
+  >embed {
+    @content;
+  }
+}
+
+// **
+// * アスペクト比計算
+// * @param {Number, String} $width 横幅 もしくは $ratiosのキー
+// * @param {Number, Boolean} $height 縦高 もしくは landscapeかどうか
+// * @return {String} アスペクト比[%]
+// ************************************************
+@function aspectratio($width, $height: true) {
+
+  // $ratios-key
+  @if(map-has-key($ratios, $width)) {
+    $horizontal: 1;
+    $vertical: 1;
+
+    // $is-landscape
+    @if ($height) {
+      $horizontal: max(nth(map-get($ratios, $width), 1), nth(map-get($ratios, $width), 2));
+      $vertical: min(nth(map-get($ratios, $width), 1), nth(map-get($ratios, $width), 2));
+    }
+
+    @else {
+      $horizontal: max(nth(map-get($ratios, $width), 1), nth(map-get($ratios, $width), 2));
+      $vertical: max(nth(map-get($ratios, $width), 1), nth(map-get($ratios, $width), 2));
+    }
+
+    @return aspectratio($horizontal, $vertical);
+  }
+
+  @return percentage($height / $width);
+}
